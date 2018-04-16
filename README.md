@@ -1,26 +1,56 @@
 # zillionaire
 A party game inspired by the TV show "Who Wants to Be a Millionaire", written in Python, using [appJar](https://appjar.info) and [pygame](https://www.pygame.org). The program will open two windows: The game screen to be shown to the player/audience, and the control panel for the moderator.  
 
+## Features
+- Control panel: Program window used by the moderator to control the game stages such as starting the show, adding a new player, displaying the question and answers, logging in the player's final answer, activating jokers, and so on. It is intended to run on the computer's primary screen. [screenshots/001.jpg] 
+- Game screen: Program window shown to the player and/or audience. It is intended to run on a second screen such as a TV or a projector. [screenshots/002.jpg]  
+- Import your own questions, define their difficulty, and add comments to be displayed for the moderator during the show.
+- Fonts, sound and splash screens were chosen with the original show in mind
+
 ## Requirements
 - Python 3
 - A computer with two displays and the ability to drag windows between them
+- The game has only been tested on Ubuntu 16.04 so far, but it should work on other Linux distros and might even do so on Windows/MacOS
 
 ## Installation
 ### Ubuntu 16.04
-
 > apt-get install python3-tk python3-pip #libfreetype6-dev  
 > python3 -m pip install -U pygame --user  
 
 ## Preparing the questions
-The game does not come with any pre-defined questions - you'll have to come up with some on your own. Put them in a plain text file called `questions.csv` in the program's root directory. Each line stands for one question and consists of 7 fields (difficulty level, question, correct answer, incorrect answer 1, incorrect answer 2, incorrect answer 3, comment) which are separated by the character `|`. A valid line would look like this:
-> 1|What colour is lava?|Red|Blue|Green|Purple|Beneath the surface it's called magma
+### Method 1: Libreoffice Calc
+Open the file [[questions.csv]] in LibreOffice Calc, which will prompt you with the "Text Import" dialogue. Under "Separator Options", tick the "Other" box and type the character `|` into the field next to it. Untick all other boxes in the same row, and finally click OK.
 
-You can also create your list in Libreoffice Calc, filling the rows and columns in the aforementioned order. Under "Save as", choose the format "Text CSV (.csv)", and in the subsequent dialog put `|` under "Field delimiter" and remove anything under "Text delimiter". 
+You will see a list of example questions. They were taken from [here](https://gamefaqs.gamespot.com/gba/919785-who-wants-to-be-a-millionaire-2nd-edition/faqs/40044) for demonstration purposes. Change anything to your liking. This is what the columns stand for:  
+A: Difficulty level. Put in a number from 1 to 15, where 1 is the easiest and 15 is the hardest. If multiple questions have the same difficulty level, the program will randomly pick one during the show. If there are no questions for a difficulty level, the program will pick one from the nearest available levels during the show.  
+B: Question. Maximum number of characters: 128  
+C: Correct answer: Maximum number of characters: 64  
+D-F: Incorrect answers: Maximum number of characters: 64  
+G: Comment. This will be displayed to the moderator during the show. It is intended to provide additional information about the topic for tension building or small talk purposes. It is the only field that can be left empty. Maximum number of characters: 256
+
+When saving the file, make to you to choose the .csv format when prompted.
+
+### Method 2: Manually using a text editor
+Instead of using LibreOffice, you can simply open the file [[questions.csv]] in a text editor, using `|` as a field separator. If you don't add a comment, note that putting `|` at the end of the line is required.
 
 ## Usage
-You drag the game screen window to your second display (monitor, TV, projector, ...) and hit the Fullscreen button in the control panel.
+In a terminal, go to the game's root directory, and run it with:  
+> python3 zillionaire.py
+
+You can define the show's and the first player's names like this:  
+> python3 zillionaire.py MyShow FirstPlayer
+
+Drag the game screen window to your second display (monitor, TV, projector, ...) and hit the Fullscreen button in the control panel.
+
+## Customization
+
+## TODO
+- Support multiple game screens
+- Phone joker via VOIP?
+- Audience joker via smartphone app?
 
 ## Troubleshooting
+
 ### ALSA lib underrun
 If the error message  
 `ALSA lib pcm.c:7963:(snd_pcm_recover) underrun occurred`  

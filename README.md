@@ -1,5 +1,5 @@
 # zillionaire
-A party game inspired by the TV show "Who Wants to Be a Millionaire", written in Python, using [appJar](https://appjar.info) and [pygame](https://www.pygame.org). The program will open two windows: The game screen to be shown to the player/audience, and the control panel for the moderator.  
+A party game inspired by the TV show "Who Wants to Be a Millionaire", written in Python, using [appJar](https://appjar.info) and [pygame](https://www.pygame.org).  
 
 ## Features
 - Control panel: Program window used by the moderator to control the game stages such as starting the show, adding a new player, displaying the question and answers, logging in the player's final answer, activating jokers, and so on. It is intended to run on the computer's primary screen. [screenshots/001.jpg] 
@@ -7,8 +7,11 @@ A party game inspired by the TV show "Who Wants to Be a Millionaire", written in
 - Import your own questions, define their difficulty, and add comments to be displayed for the moderator during the show.
 - Fonts, sound and splash screens were chosen with the original show in mind
 
+## Restrictions
+
+
 ## Requirements
-- Python 3
+- Python 3 with Tkinter and pygame
 - A computer with two displays and the ability to drag windows between them
 - The game has only been tested on Ubuntu 16.04 so far, but it should work on other Linux distros and might even do so on Windows/MacOS
 
@@ -45,9 +48,12 @@ Drag the game screen window to your second display (monitor, TV, projector, ...)
 ## Customization
 
 ## TODO
-- Support multiple game screens
+- Support multiple game screens, so the player doesn't have to share one with the audience
+- Splash animations for winning/losing
+- Add a commandline- and/or web-based control panel, so the game can be controlled remotely without the need of a dualscreen setup
 - Phone joker via VOIP?
 - Audience joker via smartphone app?
+- Integrating live video/audio stream for recording a show?
 
 ## Troubleshooting
 

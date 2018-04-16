@@ -8,7 +8,8 @@ A party game inspired by the TV show "Who Wants to Be a Millionaire", written in
 - Fonts, sound and splash screens were chosen with the original show in mind
 
 ## Restrictions
-
+- The phone joker requires the player or the moderator to manually use a telephone (or pick someone from the audience)
+- The audience joker can be chosen, but it doesn't do anything. Votes need to be manually counted and shown to the player/audience.
 
 ## Requirements
 - Python 3 with Tkinter and pygame
@@ -37,10 +38,10 @@ When saving the file, make to you to choose the .csv format when prompted.
 Instead of using LibreOffice, you can simply open the file [[questions.csv]] in a text editor, using `|` as a field separator. If you don't add a comment, note that putting `|` at the end of the line is required.
 
 ## Usage
-In a terminal, go to the game's root directory, and run it with:  
+In a terminal, go to the game's root directory and run it with:  
 > python3 zillionaire.py
 
-You can define the show's and the first player's names like this:  
+You can optionally define the show's and the first player's names like this:  
 > python3 zillionaire.py MyShow FirstPlayer
 
 Drag the game screen window to your second display (monitor, TV, projector, ...) and hit the Fullscreen button in the control panel.
@@ -51,6 +52,7 @@ Drag the game screen window to your second display (monitor, TV, projector, ...)
 - Support multiple game screens, so the player doesn't have to share one with the audience
 - Splash animations for winning/losing
 - Add a commandline- and/or web-based control panel, so the game can be controlled remotely without the need of a dualscreen setup
+- Option for the moderator to see players'/show's statistics
 - Phone joker via VOIP?
 - Audience joker via smartphone app?
 - Integrating live video/audio stream for recording a show?
@@ -60,6 +62,6 @@ Drag the game screen window to your second display (monitor, TV, projector, ...)
 ### ALSA lib underrun
 If the error message  
 `ALSA lib pcm.c:7963:(snd_pcm_recover) underrun occurred`  
-keeps appearing in the terminal, then maybe `pulseaudio` is not installed. On Debian-based systems, install it with  
+keeps appearing in the terminal, the reason might be a missing `pulseaudio` package. On Debian-based systems, install it with  
 > apt-get install pulseaudio
 If the issue persists after a reboot, [this guide](https://retro64xyz.github.io/computers/2017/05/26/how-to-fix-audacity-underrun/) might help.

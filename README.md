@@ -8,6 +8,7 @@ A party game inspired by the TV show "Who Wants to Be a Millionaire", written in
 - Fonts, sound and splash screens were chosen with the original show in mind
 
 ## Restrictions
+- The game screen needs a 800x600 resolution in order to look as intended.
 - The phone joker requires the player or the moderator to manually use a telephone (or pick someone from the audience)
 - The audience joker can be chosen, but it doesn't do anything. Votes need to be manually counted and shown to the player/audience.
 

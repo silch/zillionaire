@@ -28,6 +28,8 @@ Open the file [[questions.csv]] in LibreOffice Calc, which will prompt you with 
 
 You will see a list of example questions. They were taken from [here](https://gamefaqs.gamespot.com/gba/919785-who-wants-to-be-a-millionaire-2nd-edition/faqs/40044) for demonstration purposes. Change anything to your liking. This is what the columns stand for:  
 
+| Column | Value |
+| --- | --- |
 | A | Difficulty level. Put in a number from 1 to 15, where 1 is the easiest and 15 is the hardest. If multiple questions have the same difficulty level, the program will randomly pick one during the show. If there are no questions for a difficulty level, the program will pick one from the nearest available levels during the show. |  
 | B | Question. Maximum number of characters: 128 |  
 | C | Correct answer: Maximum number of characters: 64 |  

@@ -63,5 +63,5 @@ Drag the game screen window to your second display (monitor, TV, projector, ...)
 If the error message  
 `ALSA lib pcm.c:7963:(snd_pcm_recover) underrun occurred`  
 keeps appearing in the terminal, the reason might be a missing `pulseaudio` package. On Debian-based systems, install it with  
-> apt-get install pulseaudio
+> apt-get install pulseaudio  
 If the issue persists after a reboot, [this guide](https://retro64xyz.github.io/computers/2017/05/26/how-to-fix-audacity-underrun/) might help.

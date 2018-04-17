@@ -27,12 +27,11 @@ A party game inspired by the TV show "Who Wants to Be a Millionaire", written in
 Open the file [[questions.csv]] in LibreOffice Calc, which will prompt you with the "Text Import" dialogue. Under "Separator Options", tick the "Other" box and type the character `|` into the field next to it. Untick all other boxes in the same row, and finally click OK.
 
 You will see a list of example questions. They were taken from [here](https://gamefaqs.gamespot.com/gba/919785-who-wants-to-be-a-millionaire-2nd-edition/faqs/40044) for demonstration purposes. Change anything to your liking. This is what the columns stand for:  
-A: Difficulty level. Put in a number from 1 to 15, where 1 is the easiest and 15 is the hardest. If multiple questions have the same difficulty level, the program will randomly pick one during the show. If there are no questions for a difficulty level, the program will pick one from the nearest available levels during the show.  
-B: Question. Maximum number of characters: 128  
-C: Correct answer: Maximum number of characters: 64  
-D-F: Incorrect answers: Maximum number of characters: 64  
-G: Comment. This will be displayed to the moderator during the show. It is intended to provide additional information about the topic for tension building or small talk purposes. It is the only field that can be left empty. Maximum number of characters: 256
-
+|A|Difficulty level. Put in a number from 1 to 15, where 1 is the easiest and 15 is the hardest. If multiple questions have the same difficulty level, the program will randomly pick one during the show. If there are no questions for a difficulty level, the program will pick one from the nearest available levels during the show.|  
+|B|Question. Maximum number of characters: 128|  
+|C|Correct answer: Maximum number of characters: 64|  
+|D-F|Incorrect answers: Maximum number of characters: 64|  
+|G|Comment. This will be displayed to the moderator during the show. It is intended to provide additional information about the topic for tension building or small talk purposes. It is the only field that can be left empty. Maximum number of characters: 256|  
 When saving the file, make to you to choose the .csv format when prompted.
 
 ### Method 2: Manually using a text editor

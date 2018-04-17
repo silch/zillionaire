@@ -2,7 +2,10 @@
 A party game inspired by the TV show "Who Wants to Be a Millionaire", written in Python, using [appJar](https://appjar.info) and [pygame](https://www.pygame.org).  
 
 ## Features
-- Control panel: Program window used by the moderator to control the game stages such as starting the show, adding a new player, displaying the question and answers, logging in the player's final answer, activating jokers, and so on. It is intended to run on the computer's primary screen. [[screenshots/001.jpg]]  
+- Control panel: Program window used by the moderator to control the game stages such as starting the show, adding a new player, displaying the question and answers, logging in the player's final answer, activating jokers, and so on. It is intended to run on the computer's primary screen.  
+
+|[Control Panel](screenshots/001.jpg)  
+
 - Game screen: Program window shown to the player and/or audience. It is intended to run on a second screen such as a TV or a projector. [[screenshots/002.jpg]]  
 - Import your own questions, define their difficulty, and add comments to be displayed for the moderator during the show.
 - Fonts, sound and splash screens were chosen with the original show in mind
